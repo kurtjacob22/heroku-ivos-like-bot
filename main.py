@@ -23,7 +23,7 @@ for x in range(len(search)):
         try:
             print("liked")
             tweets.favorite()
-            time.sleep(60)
+            time.sleep(1800)
         except tweepy.TweepError as e:
             print(e.reason)
         except StopIteration:
