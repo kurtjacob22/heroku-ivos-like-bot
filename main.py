@@ -20,12 +20,6 @@ search = ['Blaster Silonga', 'Zild Benitez', 'Badjao de Castro', 'Unique Salonga
 
 for x in range(len(search)):
     for tweets in tweepy.Cursor(api.search, search[x]).items():
-        try:
-            print("liked")
-            tweets.favorite()
-            time.sleep(1800)
-        except tweepy.TweepError as e:
-            print(e.reason)
-        except StopIteration:
-            break
-    
+        print("liked")
+        tweets.favorite()
+        time.sleep(1800)
